@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en" class="center">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ustad | Team</title>
+
+    <!-- font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body class="center">
+    <nav>
+        <div class="first">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="asset/logo.png" alt="logo">
+                </a>
+            </div>
+            <div class="openicon">
+                <button class="btn">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+
+            <div class="closeicon">
+                <button class="btn">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <div class="page_name">
+                <h1>Team </h1>
+            </div>
+        </div>
+
+        <div class="second">
+            <div class="info">
+                <h3>name</h3>
+                <p>title</p>
+            </div>
+            <div class="image">
+                <img src="asset/01.jpeg" alt="image">
+            </div>
+        </div>
+    </nav>
+    <section>
+        <div class="sideBar">
+            <ul class="center" aria-current="page">
+                <li>
+                    <a href="index.html">
+                        <span class="icon"><i class="fa-solid fa-home"></i></span>
+                        <span class="name">Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html">
+                        <span class="icon"><i class="fa-solid fa-hands"></i></span>
+                        <span class="name">wing</span>
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="team.html">
+                        <span class="icon"><i class="fa-solid fa-people-group"></i></span>
+                        <span class="name">team</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="index.html">
+                        <span class="icon"><i class="fa-solid fa-arrow-right-from-bracket"></i></span>
+                        <span class="name">log out</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="mainContent">
+            <div id="form" class="center">
+                <form id="dataForm">
+                    <div class="area image_link">
+                        <label for="image">Image Link</label>
+                        <input name="image" id="image" type="text" placeholder="enter image link" required>
+                        <div>
+                            <img src="asset/screenshot.png" alt="Preview">
+                        </div>
+                    </div>
+
+                    <div class="area name">
+                        <label for="name">Full Name</label>
+                        <input name="name" id="name" type="text" placeholder="enter name" required>
+                    </div>
+
+                    <div class="area designation">
+                        <label for="designation">Designation</label>
+                        <input name="designation" id="designation" type="text" placeholder="enter designation" required>
+                    </div>
+
+                    <div class="area current">
+                        <label for="current">Current</label>
+                        <div class="container">
+                            <input id="cInstitution" type="text" placeholder="Institution">
+                            <input id="department" type="text" placeholder="Department">
+                            <input id="role" type="text" placeholder="Degree">
+                            <div id="addCurrent" class="btn center">Add</div>
+                        </div>
+                        <div class="listContainer">
+                            <ol id="currentList"></ol>
+                        </div>
+                    </div>
+
+                    <div class="area education">
+                        <label for="education">Education</label>
+                        <div class="container">
+                            <input id="degree" type="text" placeholder="Degree">
+                            <input id="field" type="text" placeholder="Field">
+                            <input id="institution" type="text" placeholder="Institution">
+                            <div class="statusBox">
+                                <label>Status</label><br>
+                                <input type="radio" name="status" id="ongoing" value="Ongoing">
+                                <label for="ongoing">Ongoing</label>
+                                <input type="radio" name="status" id="completed" value="Completed">
+                                <label for="completed">Completed</label>
+                            </div>
+                            <input id="scholarship" type="text" placeholder="Scholarship">
+                            <div id="addEducation" class="btn center">Add</div>
+                        </div>
+                        <div class="listContainer">
+                            <ol id="educationList"></ol>
+                        </div>
+                    </div>
+
+
+                    <div class="area research">
+                        <label for="research">Research</label>
+                        <div class="container">
+                            <input name="research" id="research" type="text" placeholder="Research">
+                            <div id="addResearch" class="btn center">Add</div>
+                        </div>
+                        <div class="listContainer">
+                            <ol id="researchList"></ol>
+                        </div>
+                    </div>
+
+                    <div class="area bio">
+                        <label for="bioShort">Short Bio</label>
+                        <textarea name="bio" id="bio" placeholder="enter short bio"></textarea>
+                    </div>
+
+                    <div class="area roleInUstad">
+                        <label for="ustadRole">Role in Ustad</label>
+                        <div class="ustadSelect">
+                            <input type="radio" name="ustadRole" id="advisor" value="advisor">
+                            <label for="advisor">Advisor</label>
+                            <input type="radio" name="ustadRole" id="lead" value="lead">
+                            <label for="lead">Lead</label>
+                        </div>
+                    </div>
+
+                    <div class="area socailLinks">
+                        <label for="research">Socail Links</label>
+                        <div class="content_box center">
+                            <div class="container center">
+                                <label for="facebookLink">Facebook Link</label>
+                                <input type="text" name="facebookLink" id="facebookLink">
+                            </div>
+                            <div class="container center">
+                                <label for="twitterLink">Twitter Link</label>
+                                <input type="text" name="twitterLink" id="twitterLink">
+                            </div>
+                            <div class="container center">
+                                <label for="linkedinLink">Linkedin Link</label>
+                                <input type="text" name="linkedinLink" id="linkedinLink">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="area button center">
+                        <button type="submit" class="btn center">Add</button>
+                    </div>
+                </form>
+            </div>
+            <hr>
+            <div id="table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Current</th>
+                            <th>Image</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody">
+                        <tr>
+                            <td>01</td>
+                            <td>mushfik</td>
+                            <td>student</td>
+                            <td><img src="./asset/01.jpeg"></td>
+                            <td>
+                                <div class="btn_container">
+                                    <button><i class="fa-solid fa-trash"></i></button>
+                                    <button><i class="fa-solid fa-eye"></i></button>
+                                    <button><i class="fa-regular fa-pen-to-square"></i></button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <script src="addCurrentList.js"></script>
+    <script src="addEducationList.js"></script>
+    <script src="addResarchList.js"></script>
+    <script src="fetchdata.js" type="module"></script>
+    <script src="memberlist.js" type="module"></script>
+    <script src="addMember.js"></script>
+</body>
+
+</html>
