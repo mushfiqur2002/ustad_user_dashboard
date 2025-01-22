@@ -18,7 +18,7 @@ dataForm.addEventListener("submit", async (e) => {
     };
 
     try {
-        const response = await fetch('https://ustad-web-server-1.onrender.com/submit',{
+        const response = await fetch('https://ustad-dashboard-server.onrender.com/submit',{
             method: 'POST',
             headers : {
                 'Content-Type' : 'application/json',
