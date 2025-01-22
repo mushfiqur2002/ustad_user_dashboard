@@ -24,16 +24,17 @@ mongoose.connect(mongoURI, {
     });
 
 
-    const memberSchema = new mongoose.Schema({
+const memberSchema = new mongoose.Schema({
         name: String,
         designation: String,
-        affiliation: {
-          current: {
+        current: [
+          {
             institution: String,
             department: String,
             role: String,
-          },
-        },
+          }
+        ],
+        
         education: [
           {
             degree: String,
@@ -52,4 +53,22 @@ mongoose.connect(mongoURI, {
         photo: String,
         company_role: String,
         bio: String,
-      });
+});
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended : true}))
+
+app.post('/submit',async (req , res) => {
+  try {
+    const data = req.body;
+
+    const formData = new FormData(data);
+    await formData.save();
+
+    res.status(200).json({message : 'form data save'})
+    
+  } catch (error) {
+    console.log('error : ', error);
+    res.status(500).json({message : 'failed to save data'})
+  }
+})
