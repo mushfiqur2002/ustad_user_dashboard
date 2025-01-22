@@ -65,6 +65,4 @@ addRBtn.addEventListener("click", function () {
 
     // Clear the input field
     document.querySelector('#research').value = '';
-
-    console.log('Current Research Array:', researchArr); // Debug log
 });

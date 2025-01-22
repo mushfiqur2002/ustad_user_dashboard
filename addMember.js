@@ -1,5 +1,3 @@
-const { json } = require("body-parser");
-
 const dataForm = document.getElementById('dataForm');
 
 dataForm.addEventListener("submit", async (e) => {
