@@ -23,14 +23,15 @@ mongoose.connect(mongoURI, {
 
 // Mongoose Schema and Model
 const formSchema = new mongoose.Schema({
-  image: { type: String, required: true },
+  photo: { type: String, required: true },
   name: { type: String, required: true },
   designation: { type: String, required: true },
   current: { type: Array, default: [] },
   bio: { type: String, required: true },
   education: { type: Array, default: [] },
-  researchAreas: { type: Array, default: [] },
-  socialLinks: {
+  research_areas: { type: Array, default: [] },
+  company_role:{ type: String, required: true},
+  social_links: {
     facebook: { type: String },
     twitter: { type: String },
     linkedin: { type: String },

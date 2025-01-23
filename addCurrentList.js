@@ -10,12 +10,6 @@ addCBtn.addEventListener('click', function () {
     const department = document.getElementById('department').value.trim();
     const role = document.getElementById('role').value.trim();
 
-    // Validation
-    if (!institution || !department || !role) {
-        alert('Fill the information');
-        return;
-    }
-
     // Create an object for the education item
     const currentItem = {
         institution,

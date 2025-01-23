@@ -12,12 +12,6 @@ addBtn.addEventListener('click', function () {
     const status = document.querySelector('input[name="status"]:checked')?.value;
     const scholarship = document.getElementById('scholarship').value.trim();
 
-    // Validation
-    if (!degree || !field || !institution || !status) {
-        alert('Fill the information');
-        return;
-    }
-
     // Create an object for the education item
     const educationItem = {
         degree,
