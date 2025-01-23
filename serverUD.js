@@ -22,37 +22,22 @@ mongoose.connect(mongoURI, {
   .catch((err) => console.error("MongoDB connection error:", err));
 
 // Mongoose Schema and Model
-const memberSchema = new mongoose.Schema({
-  name: String,
-  designation: String,
-  current: [
-    {
-      institution: String,
-      department: String,
-      role: String,
-    },
-  ],
-  education: [
-    {
-      degree: String,
-      field: String,
-      institution: String,
-      status: String,
-      scholarship: String,
-    },
-  ],
-  research_areas: [String],
-  social_links: {
-    twitter: String,
-    linkedin: String,
-    facebook: String,
+const formSchema = new mongoose.Schema({
+  image: { type: String, required: true },
+  name: { type: String, required: true },
+  designation: { type: String, required: true },
+  current: { type: Array, default: [] },
+  bio: { type: String, required: true },
+  education: { type: Array, default: [] },
+  researchAreas: { type: Array, default: [] },
+  socialLinks: {
+    facebook: { type: String },
+    twitter: { type: String },
+    linkedin: { type: String },
   },
-  photo: String,
-  company_role: String,
-  bio: String,
 });
 
-const FormData = mongoose.model("FormData", memberSchema);
+const FormData = mongoose.model("FormData", formSchema);
 
 // Routes
 app.post("/submit", async (req, res) => {
