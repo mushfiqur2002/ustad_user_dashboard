@@ -37,7 +37,7 @@ const formSchema = new mongoose.Schema({
   },
 });
 
-const FormData = mongoose.model("FormData", formSchema);
+const FormData = mongoose.model("members", formSchema,"members");
 
 // Routes
 app.post("/submit", async (req, res) => {

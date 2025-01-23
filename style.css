@@ -351,9 +351,11 @@ section {
                     font-size: 16px;
                     font-weight: 400;
                 }
-                #status{
-                    font-size: 14px;
-                    font-weight: 400;
+                .statusBox .status_context{
+                    label{
+                        font-weight: 400;
+                        font-size: 14px;
+                    }
                 }
                 .btn{
                     padding: 0 24px;
@@ -405,6 +407,20 @@ section {
                 }
             }
             
+        }
+
+        .area.roleInUstad{
+            .ustadSelect{
+                display: flex;
+                gap: 5px;
+                input{
+                    margin-left: 10px;
+                }
+                label{
+                    font-weight: 400;
+                    font-size: 14px;
+                }
+            }
         }
 
         .area.socailLinks{

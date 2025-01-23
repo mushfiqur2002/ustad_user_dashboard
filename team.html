@@ -120,10 +120,12 @@
                             <input id="institution" type="text" placeholder="Institution">
                             <div class="statusBox">
                                 <label>Status</label><br>
-                                <input type="radio" name="status" id="ongoing" value="Ongoing">
-                                <label for="ongoing">Ongoing</label>
-                                <input type="radio" name="status" id="completed" value="Completed">
-                                <label for="completed">Completed</label>
+                                <div class="status_context">
+                                    <input type="radio" name="status" id="ongoing" value="Ongoing">
+                                    <label for="ongoing">Ongoing</label>
+                                    <input type="radio" name="status" id="completed" value="Completed">
+                                    <label for="completed">Completed</label>
+                                </div>
                             </div>
                             <input id="scholarship" type="text" placeholder="Scholarship">
                             <div id="addEducation" class="btn center">Add</div>
@@ -155,8 +157,19 @@
                         <div class="ustadSelect">
                             <input type="radio" name="ustadRole" id="advisor" value="advisor">
                             <label for="advisor">Advisor</label>
+
                             <input type="radio" name="ustadRole" id="lead" value="lead">
                             <label for="lead">Lead</label>
+
+                            <input type="radio" name="ustadRole" id="mentor_panel" value="mentor">
+                            <label for="mentor_panel">Mentor Panel</label>
+
+                            <input type="radio" name="ustadRole" id="lead_research_associate"
+                                value="Lead Research Associate">
+                            <label for="lead">Lead Research Associate</label>
+
+                            <input type="radio" name="ustadRole" id="research_associate" value="Research Associate">
+                            <label for="lead">Research Associate</label>
                         </div>
                     </div>
 
@@ -221,6 +234,7 @@
     <script src="fetchdata.js" type="module"></script>
     <script src="memberlist.js" type="module"></script>
     <script src="addMember.js" type="module"></script>
+    <script src="serverUD.js"></script>
 </body>
 
 </html>
